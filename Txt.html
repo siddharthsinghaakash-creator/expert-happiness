@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Singh | Digital Portfolio</title>
+
+<style>
+/* ====== Global ====== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0a0f1f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== Header ====== */
+header {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #2563eb, #9333ea, #f43f5e);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #cbd5e1;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* ====== Section & Cards ====== */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(30,41,59,0.8);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  width: 300px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #2563eb, #9333ea, #f43f5e, #10b981);
+  animation: rotateGradient 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.card h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.card p {
+  color: #e2e8f0;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #020617;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* ====== Neon Glow Effect ====== */
+h1, h2 {
+  text-shadow:
+     0 0 5px #fff,
+     0 0 10px #fff,
+     0 0 20px #9333ea,
+     0 0 30px #9333ea,
+     0 0 40px #9333ea;
+}
+
+/* ====== Buttons (optional) ====== */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-top: 15px;
+  color: #fff;
+  border: 2px solid #2563eb;
+  border-radius: 50px;
+  transition: 0.3s;
+  font-weight: bold;
+  background: transparent;
+}
+
+.btn:hover {
+  background: #2563eb;
+  box-shadow: 0 0 15px #2563eb;
+  transform: scale(1.05);
+}
+
+/* ====== Responsive ====== */
+@media(max-width: 960px){
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Siddharth Singh</h1>
+  <p>Future Entrepreneur | Technology Enthusiast | Web Innovator</p>
+</header>
+
+<section>
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am diving into technology, business ideas, and web development. This is my first futuristic web project.</p>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <p>Web Development<br>Business Thinking<br>Stock Market Basics<br>UI/UX Design<br>AI Exploration</p>
+    <a href="#" class="btn">See Skills</a>
+  </div>
+
+  <div class="card">
+    <h2>Goals</h2>
+    <p>Build digital products, start tech-driven businesses, and create impactful solutions using cutting-edge technology.</p>
+    <a href="#" class="btn">Explore Goals</a>
+  </div>
+</section>
+
+<footer>
+  <p>Created by Siddharth Singh | 2026</p>
+</footer>
+
+</body>
+</html>
